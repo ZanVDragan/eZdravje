@@ -1,50 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>eZdravje :: 4. DN :: OIS 2015/2016</title>
-  <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {padding-top: 70px;}
-  </style>
-  <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
-  <script src="knjiznice/js/bootstrap.min.js"></script>
-  <script src="knjiznice/js/koda.js"></script>
-</head>
-<body>
-
-  <!-- ZAČETEK: Menujska vrstica na vrhu spletne strani -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menujska-vrstica">
-          <span class="sr-only">Prikaži menu</span>
-          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-        </button>
-        <!-- ZAČETEK: Ime vaše aplikacije -->
-        <a class="navbar-brand" href="index.html">{ime vaše aplikacije}</a>
-        <!-- KONEC: Ime vaše aplikacije -->
-      </div>
-      <div class="collapse navbar-collapse" id="menujska-vrstica">
-        <ul class="nav navbar-nav">
-          <li><a href="opis.html">Opis ideje</a></li>
-          <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
-          <li><a href="#">Generiranje podatkov</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- KONEC: Menujska vrstica na vrhu spletne strani -->
-
-  <!-- ZAČETEK: Vsebina aplikacije -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <p class="lead"><strong>TO-DO</strong>: Na tem mestu implementirajte vašo aplikacijo.</p>
-      </div>
-    </div>
-  </div>
-  <!-- KONEC: Vsebina aplikacije -->
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>4. DN :: Soba 102</title>
+		<link rel="icon" type="image/svg" href="img/favicon.svg">
+		<link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+		<link href="knjiznice/css/style.css" rel="stylesheet">
+		<script src="knjiznice/js/jquery-2.2.3.min.js" type="text/javascript"></script>
+		<script src="knjiznice/js/bootstrap.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<header>
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menujska-vrstica">
+								<span class="sr-only">Prikaži menu</span>
+								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">Soba 102</a>
+						</div>
+						<div class="collapse navbar-collapse" id="menujska-vrstica">
+							<ul class="nav navbar-nav">
+								<li><a href="opis.html">Opis ideje</a></li>
+								<li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
+								<li><a id="generate-data" href="?">Generiranje podatkov</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<main>
+				<div class="container">
+					<div class="row">
+						<p>Pozdravljeni <h3><b>sestra Franja</b></h3></p>
+					</div>
+				</div>
+				<div class="container ">
+					<div class="row">
+						<ul class="list-unstyled col-lg-offset-3">
+							<li class="row">
+								<ul class="list-inline col-lg-12">
+									<li class="room col-lg-3">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													Postelja 1
+												</h4>
+											</div>
+											<div id="bed-1" class="free-bed panel-body text-center">
+												<div id="ehr-1" data-ehr=""></div>
+												<div class="free">
+													<a class="add-bed" data-bed="1" href="bed.html"><p>+</p></a>
+												</div>
+												<div class="occupied">
+													<label class="name"></label>
+													<label class="surname"></label>
+													<button class="check-patient btn btn-info" type="button" data-bed="1">Preglej karton</button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="room col-lg-3">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													Postelja 2
+												</h4>
+											</div>
+											<div id="bed-2" class="panel-body free-bed text-center">
+												<div id="ehr-2" data-ehr=""></div>
+												<div class="free">
+													<a class="add-bed" data-bed="2" href="bed.html"><p>+</p></a>
+												</div>
+												<div class="occupied">
+													<label class="name"></label>
+													<label class="surname"></label>
+													<button class="check-patient btn btn-info" type="button" data-bed="2">Preglej karton</button>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="row">
+								<ul class="list-inline col-lg-12">
+									<li class="room col-lg-3">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													Postelja 3
+												</h4>
+											</div>
+											<div id="bed-3" class="panel-body free-bed text-center">
+												<div id="ehr-3" data-ehr=""></div>
+												<div class="free">
+													<a class="add-bed" data-bed="3" href="bed.html"><p>+</p></a>
+												</div>
+												<div class="occupied">
+													<label class="name"></label>
+													<label class="surname"></label>
+													<button class="check-patient btn btn-info" type="button" data-bed="3">Preglej karton</button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="room col-lg-3">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													Postelja 4
+												</h4>
+											</div>
+											<div id="bed-4" class="panel-body free-bed text-center">
+												<div id="ehr-4" data-ehr=""></div>
+												<div class="free">
+													<a class="add-bed" data-bed="4" href="bed.html"><p>+</p></a>
+												</div>
+												<div class="occupied">
+													<label class="name"></label>
+													<label class="surname"></label>
+													<button class="check-patient btn btn-info" type="button" data-bed="4">Preglej karton</button>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="well text-center"><b class="text-danger">Opomba!</b> Osveževanje strani in uporaba navigacijskega menuja bo pobrisalo vse podatke. Sprehajanje s povezavami portala (gumbi), bo podatke ohranilo.</div>
+					</div>
+				</div>
+			</main>
+			<footer>
+				Soba 102 &copy ŽVD 2016
+			</footer>
+		</div>
+	</body>
+	<script src="knjiznice/js/koda.js" type="text/javascript"></script>
 </html>

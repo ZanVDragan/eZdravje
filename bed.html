@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4. DN :: Soba 102</title>
+		<link rel="icon" type="image/svg" href="img/favicon.svg">
+		<script src="knjiznice/js/jquery-2.2.3.min.js"></script>
+		<script src="knjiznice/js/d3.min.js"></script>
+		<link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+		<link href="knjiznice/css/style.css" rel="stylesheet">
+		<script src="knjiznice/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<header>
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<div id="bed-name" class="navbar-title">Postelja 1</div>
+						</div>
+					</div>
+				</nav>
+				<!-- KONEC: Menujska vrstica na vrhu spletne strani -->
+			</header>
+			<main>
+				<div class="container">
+					<div class="row">
+						<form id="patient-record" class="form-horizontal">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										EHR ID
+									</h3>
+								</div>
+								<div class="container">
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="input-group">
+												<input id="ehr-id" name="ehr-id" class="form-control" type="text" placeholder="EHR ID" value="">
+												<span class="input-group-addon" data-toggle="tooltip" title="Za dodelitev postelje pacientu pritisnite na gumb Shrani.">?</span>
+											</div>
+										</div>
+										<button id="search-ehr" class="btn btn-info pull-right" type="button">Poišči pacienta</button>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										Osnovni podatki
+									</h3>
+								</div>
+								<div class="container">
+									<div class="panel-body">
+										<div class="form-group">
+											<label for="name">Ime: </label>
+											<input id="name" name="name" class="form-control" type="text" placeholder="Ime" required>
+										</div>
+										<div class="form-group">
+											<label>Priimek: </label>
+											<input id="surname" name="surname" class="form-control" type="text" placeholder="Priimek" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										Zdravniški karton
+									</h3>
+								</div>
+								<div class="container">
+									<div class="panel-body">
+										<div class="form-group">
+											<label for="height">Višina: </label>
+											<div class="input-group">
+												<input id="height" name="height" class="form-control" type="number" placeholder="Višina" min="0" required>
+												<span class="input-group-addon">cm</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Teža: </label>
+											<div class="input-group">
+												<input id="weight" name="weight" class="form-control" type="number" placeholder="Teža" min="0" required>
+												<span class="input-group-addon">kg</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="temperature">Temperatura: </label>
+											<div class="input-group">
+												<input id="temperature" name="temperature" class="form-control" type="number" placeholder="Temperatura" step="any" min="0" required>
+												<span class="input-group-addon">°C</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Nasičenost krvi:</label>
+											<div class="input-group">
+												<input id="saturation" name="saturation" class="form-control" type="number" placeholder="Nasičenost" min="0" max="100" required>
+												<span class="input-group-addon">%</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="line">
+												<span>Krvni tlak</span>
+											</div>
+											<div class="padding-left-1">
+												<label for="systolic">Sistolični: </label>
+												<div class="input-group">
+													<input id="systolic" name="systolic" class="form-control" type="number" placeholder="Sistolični" min="0" required>
+													<span class="input-group-addon">mmHg</span>
+												</div>
+												<label for="diastolic">Diastoični: </label>
+												<div class="input-group">
+													<input id="diastolic" name="diastolic" class="form-control" type="number" placeholder="Diastolični" min="0" required>
+													<span class="input-group-addon">mmHg</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<button id="show-medication" class="btn btn-info" type="button">Poišči zdravilo</button>
+										</div>
+									</div>
+								</div>
+								<div class="container">
+									<div class="panel-body">
+										<div class="chart">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="container">
+								<div class="form-button-container pull-right">
+									<button id="back" class="btn btn-default" type="button">Nazaj</button>
+									<button id="discharge-patient" class="btn btn-danger" type="button">Odpusti pacienta</button>
+									<button id="new-patient" class="btn btn-success" type="submit">Shrani</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</main>
+			<footer>
+				Soba 102 &copy ŽVD 2016
+			</footer>
+		</div>
+	</body>
+	<div id="response-message"></div>
+	
+	<script src="knjiznice/js/koda.js"></script>
+</html>
